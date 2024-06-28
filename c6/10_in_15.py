@@ -1,5 +1,5 @@
 import random
-
+#蒙特卡洛算法？
 sorce_list=[]
 
 def lab():
