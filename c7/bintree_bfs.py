@@ -3,6 +3,8 @@ from bin_tree import BinTreeNode,n1
 from collections  import deque
 
 def level_order(root:BinTreeNode):
+    if root is None:
+        return
     que=deque()
     res=[]
     que.append(root)
@@ -19,25 +21,25 @@ def level_order(root:BinTreeNode):
 res=[]
 
 def pre_order(root:BinTreeNode):
+    if root is None:
+        return
 
     res.append(root.val)
-    if root.nextright is not None:
-        pre_order(root.nextleft)
-    if root.nextright is not None:
-        pre_order(root.nextright)
+    pre_order(root.nextleft)
+    pre_order(root.nextright)
 
 def in_order(root:BinTreeNode):
-    if root.nextright:
-        in_order(root.nextleft)
+    if root is None:
+        return
+    in_order(root.nextleft)
     res.append(root.val)
-    if root.nextright:
-        in_order((root.nextright))
+    in_order((root.nextright))
 
 def last_order(root:BinTreeNode):
-    if root.nextleft:
-        last_order(root.nextleft)
-    if root.nextright:
-        last_order(root.nextright)
+    if root is None:
+        return
+    last_order(root.nextleft)
+    last_order(root.nextright)
     res.append(root.val)
 
 if __name__ == '__main__':
