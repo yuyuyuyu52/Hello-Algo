@@ -120,10 +120,9 @@ class BinarySearchTree:
                 in_order(current.nextright)
                 target_node=res[0]
                 # delete the target node
-                num=target_node.val
-                self.remove(num)
+                self.remove(target_node.val)
                 # set the first node to the target node
-                current.val=num
+                current.val=target_node.val
 
 
 

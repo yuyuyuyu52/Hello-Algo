@@ -1,6 +1,6 @@
 from bin_tree import BinTreeNode,n1
 
-from collections  import deque
+from collections import deque
 
 def level_order(root:BinTreeNode):
     if root is None:
