@@ -1,4 +1,15 @@
 from collections import deque
+
+"""
+graph_bfs.py
+本文件实现了基于邻接表的无向图的广度优先搜索（BFS）算法。
+主要内容：
+- graph_bfs(graph, vertex): 对给定的图从指定顶点进行广度优先遍历，返回遍历顺序的顶点列表。
+- 示例代码展示了如何创建图、添加顶点和边，并调用BFS算法。
+函数说明:
+def graph_bfs(graph: GraphAdjacencyList, vertex: int) -> list[int]:
+"""
+
 from graph_adjacency_list import GraphAdjacencyList
 
 def graph_bfs(graph:GraphAdjacencyList,vertex:int):
